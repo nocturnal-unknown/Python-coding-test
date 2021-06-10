@@ -1,0 +1,17 @@
+month, day = input().split()
+month = int(month)
+day = int(day)
+
+f = {0:"TUE", 1:"WED", 2:"THU", 3:"FRI", 4:"SAT", 5:"SUN", 6:"MON"}
+year = {1:31, 2:29, 3:31, 4:30, 5:31, 6:30, 7:31, 8:31, 9:30, 10:31, 11:30, 12:31}
+
+sum = 0
+
+for i in range(1, month):
+    sum += year[i]
+    
+sum = sum+day
+
+for i in range(7):
+    if sum%7 == i:
+        print(f[i])
